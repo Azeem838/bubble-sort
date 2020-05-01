@@ -1,9 +1,12 @@
-unsorted_list = [3, 2, 9, 6, 5]
+unsorted_list = [6, 2, 8, 1, 7, 3, 4]
 
 def bubble_sort(array)
+  k = 0
+  n = 0
   (array.length - 1).times do
+    k += 1
     i = 0
-    (array.length - 1).times do
+    (array.length - 1 * k).times do
       if (array[i] <=> array[i + 1]) == 1
         array.insert(i + 1, array.delete_at(i))
         i += 1
@@ -12,6 +15,7 @@ def bubble_sort(array)
       elsif (array[i] <=> array[i + 1]) == -1
         i += 1
       end
+      n += 1
     end
   end
   p array

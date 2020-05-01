@@ -1,10 +1,20 @@
 unsorted_list = [3, 2, 9, 6, 5]
 
-(unsorted_list.length - 1).times do
-  i = 0
-  (unsorted_list.length - 1).times do
-    unsorted_list.insert(i + 1, unsorted_list.delete_at(i)) if unsorted_list[i] > unsorted_list[i + 1]
-    i += 1
+def bubble_sort(array)
+  (array.length - 1).times do
+    i = 0
+    (array.length - 1).times do
+      if (array[i] <=> array[i + 1]) == 1
+        array.insert(i + 1, array.delete_at(i))
+        i += 1
+      elsif (array[i] <=> array[i + 1]).zero?
+        i += 1
+      elsif (array[i] <=> array[i + 1]) == -1
+        i += 1
+      end
+    end
   end
+  p array
 end
-p unsorted_list
+
+bubble_sort(unsorted_list)

@@ -34,7 +34,7 @@ Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 
 Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
+  Enabled: false
 Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:

@@ -21,4 +21,28 @@ def bubble_sort(array)
   p array
 end
 
+def bubble_sort_by(array)
+   i=0
+  (array.length - 1).times do
+  val=yield( array[i], array[i+1])
+  puts val
+  if val<=0
+    i+=1
+  else 
+    array.insert(i + 1, array.delete_at(i))
+    i+=1
+  end
+end
+    p array
+end
+
+
+
+
+
 bubble_sort(unsorted_list)
+
+
+bubble_sort_by(["hi","hello","hey"]) do |left,right|
+  left.length - right.length
+end

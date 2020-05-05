@@ -1,5 +1,3 @@
-unsorted_list = [6, 2, 8, 1, 7, 3, 4]
-
 def bubble_sort(array)
   k = 0
   (array.length - 1).times do
@@ -16,10 +14,8 @@ def bubble_sort(array)
       end
     end
   end
-  p array
+  array
 end
-
-bubble_sort(unsorted_list)
 
 def bubble_sort_by(array)
   k = 0
@@ -32,9 +28,5 @@ def bubble_sort_by(array)
       i += 1
     end
   end
-  p array
-end
-
-bubble_sort_by(%w[hi hello hey]) do |left, right|
-  left.length - right.length
+  array
 end
